@@ -1,6 +1,9 @@
-from django.urls import path, include
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
 
+from app.vps_control.views import VPSViewSet
 
-urlpatterns = [
-    path('vps', )
-]
+router = DefaultRouter()
+router.register(r"vps_servers", VPSViewSet, basename="vps_server")
+
+urlpatterns = [path("", include(router.urls))]
