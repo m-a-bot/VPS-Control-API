@@ -1,7 +1,7 @@
-from app.vps_control.interfaces.vps_server_api_interface import IVPSServerAPI
+from app.vps_control.interfaces.vps_server_api_interface import IVPSControlAPI
 
 
-class VPSServerAPI(IVPSServerAPI):
+class VPSControlAPI(IVPSControlAPI):
     def __init__(self): ...
 
     def create_server(self, *args, **kwargs):

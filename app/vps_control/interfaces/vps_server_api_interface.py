@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class IVPSServerAPI(ABC):
+class IVPSControlAPI(ABC):
     @abstractmethod
     def create_server(self, *args, **kwargs):
         raise NotImplementedError

@@ -9,6 +9,12 @@ class VPSServerSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class VPSUpdatedServerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = VPS
+        fields = ("uid", "status")
+
+
 class VPSServerStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = VPS
